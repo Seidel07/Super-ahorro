@@ -1,0 +1,8 @@
+<suite verbose="1" name="Coto">
+	<test name="Coto" preserve-order="true">
+		<classes>
+			<class name="services.coto.CotoBot">
+			</class>
+		</classes>
+	</test>
+</suite>

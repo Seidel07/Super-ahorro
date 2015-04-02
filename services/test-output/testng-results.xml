@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="1" failed="0" total="1" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Coto" duration-ms="138" started-at="2015-04-02T19:42:47Z" finished-at="2015-04-02T19:42:47Z">
+    <groups>
+    </groups>
+    <test name="Coto" duration-ms="138" started-at="2015-04-02T19:42:47Z" finished-at="2015-04-02T19:42:47Z">
+      <class name="services.coto.CotoBot">
+        <test-method status="FAIL" signature="openDriver()[pri:0, instance:services.coto.CotoBot@5464ea66]" name="openDriver" is-config="true" duration-ms="0" started-at="2015-04-02T16:42:47Z" finished-at="2015-04-02T16:42:47Z">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The driver executable does not exist: C:\Users\Irene\Documents\Dani\Programas\Workspace\SuperAhorro\GIT\SuperAhorro\services\chromedriver.exe]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\Irene\Documents\Dani\Programas\Workspace\SuperAhorro\GIT\SuperAhorro\services\chromedriver.exe
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:197)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:117)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:112)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:89)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:117)
+	at configuration.ConfigurationLoaderGui.openDriver(ConfigurationLoaderGui.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
+	at org.testng.TestRunner.run(TestRunner.java:609)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openDriver -->
+        <test-method status="SKIP" signature="run()[pri:0, instance:services.coto.CotoBot@5464ea66]" name="run" duration-ms="2" started-at="2015-04-02T16:42:47Z" finished-at="2015-04-02T16:42:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- run -->
+        <test-method status="SKIP" signature="closeDriver()[pri:0, instance:services.coto.CotoBot@5464ea66]" name="closeDriver" is-config="true" duration-ms="0" started-at="2015-04-02T16:42:47Z" finished-at="2015-04-02T16:42:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- services.coto.CotoBot -->
+    </test> <!-- Coto -->
+  </suite> <!-- Coto -->
+</testng-results>
