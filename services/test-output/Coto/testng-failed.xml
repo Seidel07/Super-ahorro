@@ -5,6 +5,7 @@
     <classes>
       <class name="services.coto.CotoBot">
         <methods>
+          <include name="addScreenshot"/>
           <include name="openDriver"/>
           <include name="run"/>
         </methods>

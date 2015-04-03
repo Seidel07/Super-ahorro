@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Vea]">
-  <test name="Vea(failed)">
+<suite name="Failed suite [Coto]">
+  <test name="Coto(failed)">
     <classes>
-      <class name="services.vea.VeaBot">
+      <class name="services.coto.CotoBot">
         <methods>
-          <include name="closeDriver"/>
-          <include name="run"/>
+          <include name="addScreenshot"/>
           <include name="openDriver"/>
+          <include name="run"/>
         </methods>
-      </class> <!-- services.vea.VeaBot -->
+      </class> <!-- services.coto.CotoBot -->
     </classes>
-  </test> <!-- Vea(failed) -->
-</suite> <!-- Failed suite [Vea] -->
+  </test> <!-- Coto(failed) -->
+</suite> <!-- Failed suite [Coto] -->
