@@ -1,0 +1,8 @@
+<suite verbose="1" name="Vea">
+	<test name="Vea" preserve-order="true">
+		<classes>
+			<class name="services.vea.VeaBot">
+			</class>
+		</classes>
+	</test>
+</suite>

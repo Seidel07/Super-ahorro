@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Coto" duration-ms="138" started-at="2015-04-02T19:42:47Z" finished-at="2015-04-02T19:42:47Z">
+  <suite name="Vea" duration-ms="8683805" started-at="2015-04-03T11:04:16Z" finished-at="2015-04-03T13:28:59Z">
     <groups>
     </groups>
-    <test name="Coto" duration-ms="138" started-at="2015-04-02T19:42:47Z" finished-at="2015-04-02T19:42:47Z">
-      <class name="services.coto.CotoBot">
-        <test-method status="FAIL" signature="openDriver()[pri:0, instance:services.coto.CotoBot@5464ea66]" name="openDriver" is-config="true" duration-ms="0" started-at="2015-04-02T16:42:47Z" finished-at="2015-04-02T16:42:47Z">
-          <exception class="java.lang.IllegalStateException">
+    <test name="Vea" duration-ms="8683805" started-at="2015-04-03T11:04:16Z" finished-at="2015-04-03T13:28:59Z">
+      <class name="services.vea.VeaBot">
+        <test-method status="PASS" signature="openDriver()[pri:0, instance:services.vea.VeaBot@7e78fc6]" name="openDriver" is-config="true" duration-ms="3047" started-at="2015-04-03T08:04:16Z" finished-at="2015-04-03T08:04:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openDriver -->
+        <test-method status="PASS" signature="run()[pri:0, instance:services.vea.VeaBot@7e78fc6]" name="run" duration-ms="8680717" started-at="2015-04-03T08:04:19Z" finished-at="2015-04-03T10:28:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- run -->
+        <test-method status="FAIL" signature="addScreenshot(org.testng.ITestResult)[pri:0, instance:services.vea.VeaBot@7e78fc6]" name="addScreenshot" is-config="true" duration-ms="0" started-at="2015-04-03T10:28:59Z" finished-at="2015-04-03T10:28:59Z">
+          <exception class="java.lang.IllegalArgumentException">
             <message>
-              <![CDATA[The driver executable does not exist: C:\Users\Irene\Documents\Dani\Programas\Workspace\SuperAhorro\GIT\SuperAhorro\services\chromedriver.exe]]>
+              <![CDATA[wrong number of arguments]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\Irene\Documents\Dani\Programas\Workspace\SuperAhorro\GIT\SuperAhorro\services\chromedriver.exe
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:197)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:117)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:112)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:89)
-	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:117)
-	at configuration.ConfigurationLoaderGui.openDriver(ConfigurationLoaderGui.java:19)
+              <![CDATA[java.lang.IllegalArgumentException: wrong number of arguments
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -28,8 +30,8 @@
 	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
-	at org.testng.TestRunner.run(TestRunner.java:609)
+	at org.testng.TestRunner.afterRun(TestRunner.java:1014)
+	at org.testng.TestRunner.run(TestRunner.java:621)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
@@ -44,19 +46,15 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openDriver -->
-        <test-method status="SKIP" signature="run()[pri:0, instance:services.coto.CotoBot@5464ea66]" name="run" duration-ms="2" started-at="2015-04-02T16:42:47Z" finished-at="2015-04-02T16:42:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- run -->
-        <test-method status="SKIP" signature="closeDriver()[pri:0, instance:services.coto.CotoBot@5464ea66]" name="closeDriver" is-config="true" duration-ms="0" started-at="2015-04-02T16:42:47Z" finished-at="2015-04-02T16:42:47Z">
+        </test-method> <!-- addScreenshot -->
+        <test-method status="SKIP" signature="closeDriver()[pri:0, instance:services.vea.VeaBot@7e78fc6]" name="closeDriver" is-config="true" duration-ms="0" started-at="2015-04-03T10:28:59Z" finished-at="2015-04-03T10:28:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-      </class> <!-- services.coto.CotoBot -->
-    </test> <!-- Coto -->
-  </suite> <!-- Coto -->
+      </class> <!-- services.vea.VeaBot -->
+    </test> <!-- Vea -->
+  </suite> <!-- Vea -->
 </testng-results>

@@ -1,4 +1,4 @@
-package pages.coto;
+package pages.superMarkets.coto;
 
 import java.util.List;
 

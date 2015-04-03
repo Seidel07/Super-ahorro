@@ -1,4 +1,4 @@
-package pages.coto;
+package pages.superMarkets.coto;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

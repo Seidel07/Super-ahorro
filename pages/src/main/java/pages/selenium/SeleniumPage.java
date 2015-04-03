@@ -73,5 +73,13 @@ public abstract class SeleniumPage {
 		}
 		return true;
 	}
+	
+	public void sleep(Long millis) {
+		try {
+			Thread.sleep(millis);
+		} catch (Exception e) {
+
+		}
+	}
 
 }

@@ -6,10 +6,10 @@ import java.util.List;
 
 import org.testng.annotations.Test;
 
-import pages.coto.CotoHomePage;
-import pages.coto.CotoProductsPage;
 import pages.model.Categories;
 import pages.model.Product;
+import pages.superMarkets.coto.CotoHomePage;
+import pages.superMarkets.coto.CotoProductsPage;
 import configuration.ConfigurationLoaderGui;
 
 public class CotoBot extends ConfigurationLoaderGui{
