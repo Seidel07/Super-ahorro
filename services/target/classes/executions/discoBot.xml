@@ -1,0 +1,8 @@
+<suite verbose="1" name="Disco">
+	<test name="Disco" preserve-order="true">
+		<classes>
+			<class name="services.disco.DiscoBot">
+			</class>
+		</classes>
+	</test>
+</suite>
