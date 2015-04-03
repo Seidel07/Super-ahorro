@@ -29,12 +29,8 @@ public class VeaProductsPage extends VeaHomePage{
 		Product product = new Product();
 		
 		List<WebElement> tdList = null;
-		try {
 			product.setDescription(productElement.findElement(By.className("link-lista2")).getText());
 			tdList = productElement.findElements(By.tagName("td"));
-		} catch (StaleElementReferenceException e) {
-			System.out.println("This staleElementReferenceException is a piece of shit");
-		}
 		Double price = null;
 		for (WebElement td : tdList) {
 			try {
@@ -47,11 +43,7 @@ public class VeaProductsPage extends VeaHomePage{
 			}
 			
 		}
-		try {
 			product.setPrice(price);
-		} catch (NullPointerException e) {
-			System.out.println("The price for " + product.getDescription() + " is null.");
-		}
 		System.out.println(product.toString());
 		return product;
 	}

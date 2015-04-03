@@ -29,22 +29,14 @@ public class DiscoProductsPage extends DiscoHomePage{
 		Product product = new Product();
 		
 		List<WebElement> tdList = null;
-		try {
 			product.setDescription(productElement.findElement(By.className("link-lista2")).getText());
 			tdList = productElement.findElements(By.tagName("td"));
-		} catch (StaleElementReferenceException e) {
-			System.out.println("This staleElementReferenceException is a piece of shit");
-		}
 		Double price = null;
 		for (WebElement td : tdList) {
-			try {
 				if (td.getText().trim().matches("\\$\\d+(\\.\\d+)")) {
 					price = Double.valueOf(td.getText().replace(",", ".").replace("$", "").trim());
 					break;
 				}
-			} catch (Exception e) {
-				System.out.println("2 This staleElementReferenceException is a piece of shit");
-			}
 			
 		}
 		try {
