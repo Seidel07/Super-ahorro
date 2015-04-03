@@ -22,11 +22,7 @@ public abstract class SeleniumPage {
 
 	public boolean webElementIsDisplayedInPage(By by) {
 		try {
-			if (this.driver.findElement(by).isDisplayed()) {
-				return true;
-			} else {
-				return false;
-			}
+			return this.driver.findElement(by).isDisplayed();
 		} catch (Exception e) {
 			return false;
 		}
@@ -34,17 +30,13 @@ public abstract class SeleniumPage {
 
 	public boolean webElementIsDisplayedInElement(WebElement webElement, By by) {
 		try {
-			if (webElement.findElement(by).isDisplayed()) {
-				return true;
-			} else {
-				return false;
-			}
+			return webElement.findElement(by).isDisplayed();
 		} catch (Exception e) {
 			return false;
 		}
 	}
 
-	public boolean waitUntilElementExistsInPage(By by, long timeOutInMillis) {
+	public boolean waitUntilElementIsDisplayedInPage(By by, long timeOutInMillis) {
 		this.startTime = DateTime.now().getMillis();
 		while (!this.webElementIsDisplayedInPage(by)) {
 			if (DateTime.now().getMillis() - this.startTime > timeOutInMillis) {
@@ -80,6 +72,25 @@ public abstract class SeleniumPage {
 		} catch (Exception e) {
 
 		}
+	}
+	
+	public boolean webElementAttributeContains(WebElement webElement, String attribute, String value) {
+		try {
+			return webElement.getAttribute(attribute).contains(value);
+		} catch (Exception e) {
+			return false;
+		}
+		
+	}
+	
+	public boolean waitUntilElementContainsAttribute(WebElement webElement, String attribute, String value, long timeOutInMillis) {
+		this.startTime = DateTime.now().getMillis();
+		while (!this.webElementAttributeContains(webElement, attribute, value)) {
+			if (DateTime.now().getMillis() - this.startTime > timeOutInMillis) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 }

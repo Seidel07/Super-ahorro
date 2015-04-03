@@ -1,0 +1,8 @@
+<suite verbose="1" name="Jumbo">
+	<test name="Jumbo" preserve-order="true">
+		<classes>
+			<class name="services.jumbo.JumboBot">
+			</class>
+		</classes>
+	</test>
+</suite>

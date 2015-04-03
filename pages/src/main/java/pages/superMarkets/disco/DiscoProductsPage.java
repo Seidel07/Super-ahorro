@@ -22,28 +22,21 @@ public class DiscoProductsPage extends DiscoHomePage{
 
 	public DiscoProductsPage(WebDriver driver) {
 		super(driver);
-		this.waitUntilElementExistsInPage(By.className("tM"), TimeUnit.SECONDS.toMillis(10));
+		this.waitUntilElementIsDisplayedInPage(By.className("tM"), TimeUnit.SECONDS.toMillis(10));
 	}
 
 	private Product setProduct(WebElement productElement) {
 		Product product = new Product();
-		
-		List<WebElement> tdList = null;
-			product.setDescription(productElement.findElement(By.className("link-lista2")).getText());
-			tdList = productElement.findElements(By.tagName("td"));
+		product.setDescription(productElement.findElement(By.className("link-lista2")).getText());
+		List<WebElement> tdList = productElement.findElements(By.tagName("td"));
 		Double price = null;
 		for (WebElement td : tdList) {
-				if (td.getText().trim().matches("\\$\\d+(\\.\\d+)")) {
-					price = Double.valueOf(td.getText().replace(",", ".").replace("$", "").trim());
-					break;
-				}
-			
+			if (td.getText().trim().matches("\\$\\d+(\\.\\d+)")) {
+				price = Double.valueOf(td.getText().replace(",", ".").replace("$", "").trim());
+				break;
+			}
 		}
-		try {
-			product.setPrice(price);
-		} catch (NullPointerException e) {
-			System.out.println("The price for " + product.getDescription() + " is null.");
-		}
+		product.setPrice(price);
 		System.out.println(product.toString());
 		return product;
 	}
@@ -69,8 +62,6 @@ public class DiscoProductsPage extends DiscoHomePage{
 
 	private List<Product> setAllProductsFromCategory(WebElement categoryElement) {
 		List<Product> productList = new ArrayList<Product>();
-		//		Integer subCategoriesQuantity = this.getSubCategoriesQuantity(categoryElement.findElements(By.tagName("table")));
-		//		for (int i = 0; i < subCategoriesQuantity; i++) {
 		for (int i = 0; i < categoryElement.findElements(By.tagName("table")).size(); i++) {
 			if (categoryElement.findElements(By.tagName("table")).get(i).isDisplayed()) {
 				WebElement subCategoryElement = categoryElement.findElements(By.tagName("table")).get(i);
@@ -82,7 +73,6 @@ public class DiscoProductsPage extends DiscoHomePage{
 				} else {
 					productList.addAll(this.setAllProductsFromSubCategory());
 				}
-				//			subCategoryElement = categoryElement.findElements(By.tagName("table")).get(i);
 				subCategoryElement.findElement(By.tagName("a")).click();
 			}
 		}

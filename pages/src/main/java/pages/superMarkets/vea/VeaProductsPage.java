@@ -22,7 +22,7 @@ public class VeaProductsPage extends VeaHomePage{
 
 	public VeaProductsPage(WebDriver driver) {
 		super(driver);
-		this.waitUntilElementExistsInPage(By.className("tM"), TimeUnit.SECONDS.toMillis(10));
+		this.waitUntilElementIsDisplayedInPage(By.className("tM"), TimeUnit.SECONDS.toMillis(10));
 	}
 
 	private Product setProduct(WebElement productElement) {
