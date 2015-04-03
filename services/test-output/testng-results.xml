@@ -2,6 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Vea" duration-ms="8683805" started-at="2015-04-03T11:04:16Z" finished-at="2015-04-03T13:28:59Z">
     <groups>
     </groups>
@@ -16,6 +17,72 @@
           </reporter-output>
         </test-method> <!-- run -->
         <test-method status="FAIL" signature="addScreenshot(org.testng.ITestResult)[pri:0, instance:services.vea.VeaBot@7e78fc6]" name="addScreenshot" is-config="true" duration-ms="0" started-at="2015-04-03T10:28:59Z" finished-at="2015-04-03T10:28:59Z">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[wrong number of arguments]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: wrong number of arguments
+=======
+  <suite name="Coto" duration-ms="3481" started-at="2015-04-03T13:46:11Z" finished-at="2015-04-03T13:46:15Z">
+    <groups>
+    </groups>
+    <test name="Coto" duration-ms="3481" started-at="2015-04-03T13:46:11Z" finished-at="2015-04-03T13:46:15Z">
+      <class name="services.coto.CotoBot">
+        <test-method status="PASS" signature="openDriver()[pri:0, instance:services.coto.CotoBot@26b496d]" name="openDriver" is-config="true" duration-ms="3259" started-at="2015-04-03T10:46:11Z" finished-at="2015-04-03T10:46:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openDriver -->
+        <test-method status="FAIL" signature="run()[pri:0, instance:services.coto.CotoBot@26b496d]" name="run" duration-ms="156" started-at="2015-04-03T10:46:15Z" finished-at="2015-04-03T10:46:15Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [2] but found [1]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [2] but found [1]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:370)
+	at org.testng.Assert.assertEquals(Assert.java:380)
+	at services.coto.CotoBot.run(CotoBot.java:21)
+>>>>>>> develop
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.TestRunner.afterRun(TestRunner.java:1014)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+<<<<<<< HEAD
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addScreenshot -->
+        <test-method status="SKIP" signature="closeDriver()[pri:0, instance:services.vea.VeaBot@7e78fc6]" name="closeDriver" is-config="true" duration-ms="0" started-at="2015-04-03T10:28:59Z" finished-at="2015-04-03T10:28:59Z">
+=======
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- run -->
+        <test-method status="FAIL" signature="addScreenshot(org.testng.ITestResult)[pri:0, instance:services.coto.CotoBot@26b496d]" name="addScreenshot" is-config="true" duration-ms="0" started-at="2015-04-03T10:46:15Z" finished-at="2015-04-03T10:46:15Z">
           <exception class="java.lang.IllegalArgumentException">
             <message>
               <![CDATA[wrong number of arguments]]>
@@ -50,11 +117,12 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addScreenshot -->
-        <test-method status="SKIP" signature="closeDriver()[pri:0, instance:services.vea.VeaBot@7e78fc6]" name="closeDriver" is-config="true" duration-ms="0" started-at="2015-04-03T10:28:59Z" finished-at="2015-04-03T10:28:59Z">
+        <test-method status="SKIP" signature="closeDriver()[pri:0, instance:services.coto.CotoBot@26b496d]" name="closeDriver" is-config="true" duration-ms="0" started-at="2015-04-03T10:46:15Z" finished-at="2015-04-03T10:46:15Z">
+>>>>>>> develop
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-      </class> <!-- services.vea.VeaBot -->
-    </test> <!-- Vea -->
-  </suite> <!-- Vea -->
+      </class> <!-- services.coto.CotoBot -->
+    </test> <!-- Coto -->
+  </suite> <!-- Coto -->
 </testng-results>

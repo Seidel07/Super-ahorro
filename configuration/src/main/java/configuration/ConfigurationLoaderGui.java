@@ -10,6 +10,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
+import org.testng.Reporter;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -25,7 +27,7 @@ public class ConfigurationLoaderGui {
 		this.driver = new ChromeDriver();
 	}
 	
-	@AfterTest
+	@AfterMethod
 	public void addScreenshot(ITestResult result) {
 		if (!result.isSuccess()) {
 			File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
@@ -41,7 +43,7 @@ public class ConfigurationLoaderGui {
 		}
 	}
 
-	@AfterTest
+	@AfterTest(alwaysRun = true)
 	public void closeDriver() {
 		if (this.driver != null) {
 			this.driver.quit();

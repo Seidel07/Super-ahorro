@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pages.model.Categories;
