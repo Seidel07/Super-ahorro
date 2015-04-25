@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -69,8 +68,6 @@ public class DiscoProductsPage extends DiscoHomePage{
 
 	private List<Product> setAllProductsFromCategory(WebElement categoryElement) {
 		List<Product> productList = new ArrayList<Product>();
-		//		Integer subCategoriesQuantity = this.getSubCategoriesQuantity(categoryElement.findElements(By.tagName("table")));
-		//		for (int i = 0; i < subCategoriesQuantity; i++) {
 		for (int i = 0; i < categoryElement.findElements(By.tagName("table")).size(); i++) {
 			if (categoryElement.findElements(By.tagName("table")).get(i).isDisplayed()) {
 				WebElement subCategoryElement = categoryElement.findElements(By.tagName("table")).get(i);
@@ -82,7 +79,6 @@ public class DiscoProductsPage extends DiscoHomePage{
 				} else {
 					productList.addAll(this.setAllProductsFromSubCategory());
 				}
-				//			subCategoryElement = categoryElement.findElements(By.tagName("table")).get(i);
 				subCategoryElement.findElement(By.tagName("a")).click();
 			}
 		}
