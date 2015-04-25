@@ -27,6 +27,14 @@ public abstract class SeleniumPage {
 			return false;
 		}
 	}
+	
+	public boolean webElementIsDisplayedInPage(WebElement webElement) {
+		try {
+			return webElement.isDisplayed();
+		} catch (Exception e) {
+			return false;
+		}
+	}
 
 	public boolean webElementIsDisplayedInElement(WebElement webElement, By by) {
 		try {
@@ -49,6 +57,16 @@ public abstract class SeleniumPage {
 	public boolean waitUntilElementDissapearsFromPage(By by, long timeOutInMillis) {
 		this.startTime = DateTime.now().getMillis();
 		while (this.webElementIsDisplayedInPage(by)) {
+			if (DateTime.now().getMillis() - this.startTime > timeOutInMillis) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public boolean waitUntilElementDissapearsFromPage(WebElement webElement, long timeOutInMillis) {
+		this.startTime = DateTime.now().getMillis();
+		while (this.webElementIsDisplayedInPage(webElement)) {
 			if (DateTime.now().getMillis() - this.startTime > timeOutInMillis) {
 				return false;
 			}
@@ -86,6 +104,16 @@ public abstract class SeleniumPage {
 	public boolean waitUntilElementContainsAttribute(WebElement webElement, String attribute, String value, long timeOutInMillis) {
 		this.startTime = DateTime.now().getMillis();
 		while (!this.webElementAttributeContains(webElement, attribute, value)) {
+			if (DateTime.now().getMillis() - this.startTime > timeOutInMillis) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public boolean waitUntilElementDoesntContainAttribute(WebElement webElement, String attribute, String value, long timeOutInMillis) {
+		this.startTime = DateTime.now().getMillis();
+		while (this.webElementAttributeContains(webElement, attribute, value)) {
 			if (DateTime.now().getMillis() - this.startTime > timeOutInMillis) {
 				return false;
 			}

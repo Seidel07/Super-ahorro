@@ -2,38 +2,40 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Jumbo" duration-ms="68848" started-at="2015-04-03T16:12:46Z" finished-at="2015-04-03T16:13:55Z">
+  <suite name="Disco" duration-ms="128219" started-at="2015-04-04T16:48:00Z" finished-at="2015-04-04T16:50:08Z">
     <groups>
     </groups>
-    <test name="Jumbo" duration-ms="68848" started-at="2015-04-03T16:12:46Z" finished-at="2015-04-03T16:13:55Z">
-      <class name="services.jumbo.JumboBot">
-        <test-method status="PASS" signature="openDriver()[pri:0, instance:services.jumbo.JumboBot@72e6f7d2]" name="openDriver" is-config="true" duration-ms="2848" started-at="2015-04-03T13:12:46Z" finished-at="2015-04-03T13:12:49Z">
+    <test name="Disco" duration-ms="128219" started-at="2015-04-04T16:48:00Z" finished-at="2015-04-04T16:50:08Z">
+      <class name="services.disco.DiscoBot">
+        <test-method status="PASS" signature="openDriver()[pri:0, instance:services.disco.DiscoBot@175093f1]" name="openDriver" is-config="true" duration-ms="5407" started-at="2015-04-04T13:48:00Z" finished-at="2015-04-04T13:48:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openDriver -->
-        <test-method status="FAIL" signature="jumboBot()[pri:0, instance:services.jumbo.JumboBot@72e6f7d2]" name="jumboBot" duration-ms="64454" started-at="2015-04-03T13:12:49Z" finished-at="2015-04-03T13:13:54Z">
-          <exception class="org.openqa.selenium.ElementNotVisibleException">
+        <test-method status="FAIL" signature="run()[pri:0, instance:services.disco.DiscoBot@175093f1]" name="run" duration-ms="120791" started-at="2015-04-04T13:48:06Z" finished-at="2015-04-04T13:50:06Z">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
             <message>
-              <![CDATA[element not visible
-  (Session info: chrome=41.0.2272.101)
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: chrome=41.0.2272.118)
   (Driver info: chromedriver=2.14.313457 (3d645c400edf2e2c500566c9aa096063e707c9cf),platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 22 milliseconds
+Command duration or timeout: 102 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '2.44.0', revision: '76d78cf323ce037c5f92db6c1bba601c2ac43ad8', time: '2014-10-23 13:11:40'
 System info: host: 'Irene-PC', ip: '192.168.0.2', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.6.0_32'
-Session ID: 661709a98cdc06fe1745bb3beb5f27b4
+Session ID: af400be442e44e6d1d8bc9f5f94c0e20
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\Irene\AppData\Local\Temp\scoped_dir7068_21737}, rotatable=false, locationContextEnabled=true, mobileEmulationEnabled=false, version=41.0.2272.101, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\Irene\AppData\Local\Temp\scoped_dir3088_22963}, rotatable=false, locationContextEnabled=true, mobileEmulationEnabled=false, version=41.0.2272.118, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotVisibleException: element not visible
-  (Session info: chrome=41.0.2272.101)
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=41.0.2272.118)
   (Driver info: chromedriver=2.14.313457 (3d645c400edf2e2c500566c9aa096063e707c9cf),platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 22 milliseconds
+Command duration or timeout: 102 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '2.44.0', revision: '76d78cf323ce037c5f92db6c1bba601c2ac43ad8', time: '2014-10-23 13:11:40'
 System info: host: 'Irene-PC', ip: '192.168.0.2', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.6.0_32'
-Session ID: 661709a98cdc06fe1745bb3beb5f27b4
+Session ID: af400be442e44e6d1d8bc9f5f94c0e20
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\Irene\AppData\Local\Temp\scoped_dir7068_21737}, rotatable=false, locationContextEnabled=true, mobileEmulationEnabled=false, version=41.0.2272.101, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\Irene\AppData\Local\Temp\scoped_dir3088_22963}, rotatable=false, locationContextEnabled=true, mobileEmulationEnabled=false, version=41.0.2272.118, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -42,10 +44,17 @@ Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browser
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
-	at pages.superMarkets.jumbo.JumboProductsPage.setAllProductsFromCategory(JumboProductsPage.java:70)
-	at pages.superMarkets.jumbo.JumboProductsPage.setAllProducts(JumboProductsPage.java:98)
-	at services.jumbo.JumboBot.jumboBot(JumboBot.java:20)
+	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:171)
+	at org.openqa.selenium.remote.RemoteWebElement.findElementByClassName(RemoteWebElement.java:228)
+	at org.openqa.selenium.By$ByClassName.findElement(By.java:387)
+	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:167)
+	at pages.superMarkets.disco.DiscoProductsPage.setProduct(DiscoProductsPage.java:30)
+	at pages.superMarkets.disco.DiscoProductsPage.setAllProductsFromPage(DiscoProductsPage.java:47)
+	at pages.superMarkets.disco.DiscoProductsPage.setAllProductsFromSubCategory(DiscoProductsPage.java:59)
+	at pages.superMarkets.disco.DiscoProductsPage.setAllProductsFromCategory(DiscoProductsPage.java:74)
+	at pages.superMarkets.disco.DiscoProductsPage.setAllProductsFromCategory(DiscoProductsPage.java:72)
+	at pages.superMarkets.disco.DiscoProductsPage.setAllProducts(DiscoProductsPage.java:97)
+	at services.disco.DiscoBot.run(DiscoBot.java:20)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -72,26 +81,26 @@ Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browser
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- jumboBot -->
-        <test-method status="PASS" signature="addScreenshot(org.testng.ITestResult)[pri:0, instance:services.jumbo.JumboBot@72e6f7d2]" name="addScreenshot" is-config="true" duration-ms="404" started-at="2015-04-03T13:13:54Z" finished-at="2015-04-03T13:13:54Z">
+        </test-method> <!-- run -->
+        <test-method status="PASS" signature="addScreenshot(org.testng.ITestResult)[pri:0, instance:services.disco.DiscoBot@175093f1]" name="addScreenshot" is-config="true" duration-ms="576" started-at="2015-04-04T13:50:06Z" finished-at="2015-04-04T13:50:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=jumboBot status=FAILURE method=JumboBot.jumboBot()[pri:0, instance:services.jumbo.JumboBot@72e6f7d2] output={null}]]]>
+                <![CDATA[[TestResult name=run status=FAILURE method=DiscoBot.run()[pri:0, instance:services.disco.DiscoBot@175093f1] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addScreenshot -->
-        <test-method status="PASS" signature="closeDriver()[pri:0, instance:services.jumbo.JumboBot@72e6f7d2]" name="closeDriver" is-config="true" duration-ms="1122" started-at="2015-04-03T13:13:54Z" finished-at="2015-04-03T13:13:55Z">
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:services.disco.DiscoBot@175093f1]" name="closeDriver" is-config="true" duration-ms="1404" started-at="2015-04-04T13:50:07Z" finished-at="2015-04-04T13:50:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-      </class> <!-- services.jumbo.JumboBot -->
-    </test> <!-- Jumbo -->
-  </suite> <!-- Jumbo -->
+      </class> <!-- services.disco.DiscoBot -->
+    </test> <!-- Disco -->
+  </suite> <!-- Disco -->
 </testng-results>

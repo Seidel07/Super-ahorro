@@ -36,8 +36,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Jumbo">
-              <span class="suite-name border-failed">Jumbo</span>
+            <a href="#" class="navigator-link" panel-name="suite-Disco">
+              <span class="suite-name border-failed">Disco</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -47,37 +47,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Jumbo">
-                    <span>C:\Users\Irene\Documents\Dani\Programas\Workspace\SuperAhorro\GIT\SuperAhorro\services\src\main\resources\executions\jumboBot.xml</span>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Disco">
+                    <span>C:\Users\Irene\Documents\Dani\Programas\Workspace\SuperAhorro\GIT\SuperAhorro\services\src\main\resources\executions\discoBot.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Jumbo">
+                  <a href="#" class="navigator-link " panel-name="testlist-Disco">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-Jumbo">
+                  <a href="#" class="navigator-link " panel-name="group-Disco">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-Jumbo">
+                  <a href="#" class="navigator-link " panel-name="times-Disco">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Jumbo">
+                  <a href="#" class="navigator-link " panel-name="reporter-Disco">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Jumbo">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Disco">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Jumbo">
+                  <a href="#" class="navigator-link " panel-name="chronological-Disco">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -95,16 +95,16 @@
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
                     <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Jumbo" class="hide-methods failed suite-Jumbo"> (hide)</a> <!-- hide-methods failed suite-Jumbo -->
-                      <a href="#" panel-name="suite-Jumbo" class="show-methods failed suite-Jumbo"> (show)</a> <!-- show-methods failed suite-Jumbo -->
+                      <a href="#" panel-name="suite-Disco" class="hide-methods failed suite-Disco"> (hide)</a> <!-- hide-methods failed suite-Disco -->
+                      <a href="#" panel-name="suite-Disco" class="show-methods failed suite-Disco"> (show)</a> <!-- show-methods failed suite-Disco -->
                     </span>
-                    <div class="method-list-content failed suite-Jumbo">
+                    <div class="method-list-content failed suite-Disco">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Jumbo" title="services.jumbo.JumboBot" hash-for-method="jumboBot">jumboBot</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Disco" title="services.disco.DiscoBot" hash-for-method="run">run</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Jumbo -->
+                    </div> <!-- method-list-content failed suite-Disco -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -115,88 +115,96 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Jumbo" class="panel Jumbo">
-          <div class="suite-Jumbo-class-failed">
+        <div panel-name="suite-Disco" class="panel Disco">
+          <div class="suite-Disco-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">services.jumbo.JumboBot</span>
+              <span class="class-name">services.disco.DiscoBot</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="jumboBot">
-                  </a> <!-- jumboBot -->
-                  <span class="method-name">jumboBot</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotVisibleException: element not visible
-  (Session info: chrome=41.0.2272.101)
+                  <a name="run">
+                  </a> <!-- run -->
+                  <span class="method-name">run</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=41.0.2272.118)
   (Driver info: chromedriver=2.14.313457 (3d645c400edf2e2c500566c9aa096063e707c9cf),platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 22 milliseconds
+Command duration or timeout: 102 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
 System info: host: &apos;Irene-PC&apos;, ip: &apos;192.168.0.2&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.6.0_32&apos;
-Session ID: 661709a98cdc06fe1745bb3beb5f27b4
+Session ID: af400be442e44e6d1d8bc9f5f94c0e20
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\Irene\AppData\Local\Temp\scoped_dir7068_21737}, rotatable=false, locationContextEnabled=true, mobileEmulationEnabled=false, version=41.0.2272.101, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\Irene\AppData\Local\Temp\scoped_dir3088_22963}, rotatable=false, locationContextEnabled=true, mobileEmulationEnabled=false, version=41.0.2272.118, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
-	at pages.superMarkets.jumbo.JumboProductsPage.setAllProductsFromCategory(JumboProductsPage.java:70)
-	at pages.superMarkets.jumbo.JumboProductsPage.setAllProducts(JumboProductsPage.java:98)
-	at services.jumbo.JumboBot.jumboBot(JumboBot.java:20)
+	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:171)
+	at org.openqa.selenium.remote.RemoteWebElement.findElementByClassName(RemoteWebElement.java:228)
+	at org.openqa.selenium.By$ByClassName.findElement(By.java:387)
+	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:167)
+	at pages.superMarkets.disco.DiscoProductsPage.setProduct(DiscoProductsPage.java:30)
+	at pages.superMarkets.disco.DiscoProductsPage.setAllProductsFromPage(DiscoProductsPage.java:47)
+	at pages.superMarkets.disco.DiscoProductsPage.setAllProductsFromSubCategory(DiscoProductsPage.java:59)
+	at pages.superMarkets.disco.DiscoProductsPage.setAllProductsFromCategory(DiscoProductsPage.java:74)
+	at pages.superMarkets.disco.DiscoProductsPage.setAllProductsFromCategory(DiscoProductsPage.java:72)
+	at pages.superMarkets.disco.DiscoProductsPage.setAllProducts(DiscoProductsPage.java:97)
+	at services.disco.DiscoBot.run(DiscoBot.java:20)
 ... Removed 28 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Jumbo-class-failed -->
-        </div> <!-- panel Jumbo -->
-        <div panel-name="test-xml-Jumbo" class="panel">
+          </div> <!-- suite-Disco-class-failed -->
+        </div> <!-- panel Disco -->
+        <div panel-name="test-xml-Disco" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Irene\Documents\Dani\Programas\Workspace\SuperAhorro\GIT\SuperAhorro\services\src\main\resources\executions\jumboBot.xml</span>
+            <span class="header-content">C:\Users\Irene\Documents\Dani\Programas\Workspace\SuperAhorro\GIT\SuperAhorro\services\src\main\resources\executions\discoBot.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Jumbo&quot;&gt;
-  &lt;test name=&quot;Jumbo&quot;&gt;
+&lt;suite name=&quot;Disco&quot;&gt;
+  &lt;test name=&quot;Disco&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;services.jumbo.JumboBot&quot;/&gt;
+      &lt;class name=&quot;services.disco.DiscoBot&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Jumbo --&gt;
-&lt;/suite&gt; &lt;!-- Jumbo --&gt;
+  &lt;/test&gt; &lt;!-- Disco --&gt;
+&lt;/suite&gt; &lt;!-- Disco --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Jumbo" class="panel">
+        <div panel-name="testlist-Disco" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Jumbo</span>
+            <span class="header-content">Tests for Disco</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Jumbo (1 class)</span>
+                <span class="test-name">Disco (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Jumbo" class="panel">
+        <div panel-name="group-Disco" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Jumbo</span>
+            <span class="header-content">Groups for Disco</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Jumbo" class="panel">
+        <div panel-name="times-Disco" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Jumbo</span>
+            <span class="header-content">Times for Disco</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Jumbo');
-function tableData_Jumbo() {
+suiteTableInitFunctions.push('tableData_Disco');
+function tableData_Disco() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
@@ -204,40 +212,40 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'jumboBot')
-data.setCell(0, 2, 'services.jumbo.JumboBot')
-data.setCell(0, 3, 64454);
-window.suiteTableData['Jumbo']= { tableData: data, tableDiv: 'times-div-Jumbo'}
+data.setCell(0, 1, 'run')
+data.setCell(0, 2, 'services.disco.DiscoBot')
+data.setCell(0, 3, 120791);
+window.suiteTableData['Disco']= { tableData: data, tableDiv: 'times-div-Disco'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
-              <div id="times-div-Jumbo">
-              </div> <!-- times-div-Jumbo -->
+              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <div id="times-div-Disco">
+              </div> <!-- times-div-Disco -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Jumbo" class="panel">
+        <div panel-name="reporter-Disco" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Jumbo</span>
+            <span class="header-content">Reporter output for Disco</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Jumbo" class="panel">
+        <div panel-name="ignored-methods-Disco" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Jumbo" class="panel">
+        <div panel-name="chronological-Disco" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">services.jumbo.JumboBot</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">services.disco.DiscoBot</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">openDriver</span>
                 <span class="method-start">0 ms</span>
@@ -245,16 +253,16 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">jumboBot</span>
-                <span class="method-start">2855 ms</span>
+                <span class="method-name">run</span>
+                <span class="method-start">5413 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">addScreenshot([TestResult name=jumboBot status=FAILURE method=JumboBot.jumboBot()[pri:0, instance:services.jumbo.J...)</span>
-                <span class="method-start">67316 ms</span>
+                <span class="method-name">addScreenshot([TestResult name=run status=FAILURE method=DiscoBot.run()[pri:0, instance:services.disco.DiscoBot@17...)</span>
+                <span class="method-start">126235 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">67722 ms</span>
+                <span class="method-start">126811 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

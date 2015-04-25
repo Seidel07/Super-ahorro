@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -67,14 +68,24 @@ public class JumboProductsPage extends JumboHomePage{
 			if (categoryElement.findElements(By.tagName("li")).get(i).isDisplayed()) {
 				WebElement subCategoryElement = categoryElement.findElements(By.tagName("li")).get(i);
 				System.out.println(subCategoryElement.findElement(By.tagName("a")).getText());
-				subCategoryElement.findElement(By.tagName("a")).click();
+				try {
+					subCategoryElement.findElement(By.tagName("a")).click();
+				} catch (ElementNotVisibleException e) {
+					System.out.println("Fucking ENVE");
+				}
+				
 				this.waitUntilCategotyOpens(subCategoryElement);
 				if (this.webElementIsDisplayedInElement(subCategoryElement, By.className("mainCat")) || this.webElementIsDisplayedInElement(subCategoryElement, By.className("lastCat"))) {
 					productList.addAll(this.setAllProductsFromCategory(subCategoryElement));
 				} else {
 					productList.addAll(this.setAllProductsFromSubCategory());
 				}
-				subCategoryElement.findElement(By.tagName("a")).click();
+				try {
+					subCategoryElement.findElement(By.tagName("a")).click();
+				} catch (ElementNotVisibleException e) {
+					System.out.println("2 Fucking ENVE");
+				}
+				
 				this.waitUntilCategoryCloses(subCategoryElement);
 			}
 		}
@@ -82,20 +93,35 @@ public class JumboProductsPage extends JumboHomePage{
 	}
 
 	private void waitUntilCategoryCloses(WebElement categoryElement) {
-		this.waitUntilElementContainsAttribute(categoryElement, "class", "closed", TimeUnit.SECONDS.toMillis(5));
+		if(!this.webElementAttributeContains(categoryElement, "class", "lastCat")) {
+//			this.waitUntilElementContainsAttribute(categoryElement, "class", "closed", TimeUnit.SECONDS.toMillis(5));
+			this.waitUntilElementDissapearsFromPage(categoryElement.findElement(By.tagName("li")), TimeUnit.SECONDS.toMillis(5));
+		}
 	}
-	
+
 	private void waitUntilCategotyOpens(WebElement categoryElement) {
-		this.waitUntilElementContainsAttribute(categoryElement, "class", "opened", TimeUnit.SECONDS.toMillis(5));
+		if(this.webElementAttributeContains(categoryElement, "class", "lastCat")) {
+			this.waitUntilElementContainsAttribute(categoryElement, "class", "here", TimeUnit.SECONDS.toMillis(5));
+		} else {
+			this.waitUntilElementContainsAttribute(categoryElement, "class", "opened", TimeUnit.SECONDS.toMillis(5));
+		}
 	}
 
 	public List<Product> setAllProducts() {
 		List<Product> productList = new ArrayList<Product>();
+		List<Integer> displayedLiId = new ArrayList<Integer>();
+		Integer idAux = 0;
 		for (WebElement categoryElement : this.categoriesElementList) {
-			if (!categoryElement.findElement(By.tagName("a")).getText().equals("Ofertas") && categoryElement.isDisplayed()) {
-				System.out.println(categoryElement.findElement(By.tagName("a")).getText());
-				categoryElement.findElement(By.tagName("a")).click();
-				productList.addAll(this.setAllProductsFromCategory(categoryElement));
+			if(categoryElement.isDisplayed()) {
+				displayedLiId.add(idAux);
+			}
+			idAux++;
+		}
+		for (Integer id : displayedLiId) {
+			if (!this.categoriesElementList.get(id).findElement(By.tagName("a")).getText().equals("Ofertas")) {
+				System.out.println(this.categoriesElementList.get(id).findElement(By.tagName("a")).getText());
+				this.categoriesElementList.get(id).findElement(By.tagName("a")).click();
+				productList.addAll(this.setAllProductsFromCategory(this.categoriesElementList.get(id)));
 				System.out.println(new Date());
 				System.out.println(productList.size());
 			}

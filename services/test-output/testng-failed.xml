@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Jumbo]">
-  <test name="Jumbo(failed)">
+<suite name="Failed suite [Disco]">
+  <test name="Disco(failed)">
     <classes>
-      <class name="services.jumbo.JumboBot">
+      <class name="services.disco.DiscoBot">
         <methods>
-          <include name="jumboBot"/>
           <include name="closeDriver"/>
+          <include name="run"/>
           <include name="addScreenshot"/>
           <include name="openDriver"/>
         </methods>
-      </class> <!-- services.jumbo.JumboBot -->
+      </class> <!-- services.disco.DiscoBot -->
     </classes>
-  </test> <!-- Jumbo(failed) -->
-</suite> <!-- Failed suite [Jumbo] -->
+  </test> <!-- Disco(failed) -->
+</suite> <!-- Failed suite [Disco] -->
