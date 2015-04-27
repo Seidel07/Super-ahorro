@@ -22,6 +22,10 @@ public class DiscoHomePage extends SeleniumPage  {
 	@FindBys({@FindBy(id = "ctl00_hlLogoDiscoVirtual"), @FindBy(tagName = "img")})
 	private WebElement loadImage;
 	
+	public List<WebElement> getCategoryElementList() {
+		return this.categoriesElementList;
+	}
+	
 	String notLoadingImageName = "https://www3.discovirtual.com.ar/_Imgs/logo_home.gif";
 
 	public DiscoHomePage(WebDriver driver) {
@@ -34,7 +38,7 @@ public class DiscoHomePage extends SeleniumPage  {
 		return new DiscoProductsPage(this.driver);
 	}
 	
-	protected boolean waitUntilPageStopsLoading() {
+	public boolean waitUntilPageStopsLoading() {
 		Long startTime = DateTime.now().getMillis();
 		while(!this.loadImage.getAttribute("src").equals(this.notLoadingImageName)) {
 			this.sleep(500L);

@@ -28,12 +28,19 @@ public class ConfigurationLoaderGui {
 	}
 	
 	@AfterMethod
+	public void logPossibleUsefulData(ITestResult result) {
+		if (!result.isSuccess()) {
+			System.out.println("Current url: " + this.driver.getCurrentUrl());
+		}
+	}
+	
+	@AfterMethod
 	public void addScreenshot(ITestResult result) {
 		if (!result.isSuccess()) {
 			File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 			String path = "C:\\Users\\Irene\\Documents\\Dani\\Programas\\Workspace\\SuperAhorro\\GIT\\SuperAhorro\\services\\output";
 			String imageExtension = ".png";
-			String completePath = path+ result.getTestName() + DateTime.now().getMillis() + imageExtension;
+			String completePath = path+ result.getName() + DateTime.now().getMillis() + imageExtension;
 			try {
 				FileUtils.copyFile(scrFile, new File(completePath));
 				System.out.println("Screenshot added: " + completePath);
@@ -42,6 +49,7 @@ public class ConfigurationLoaderGui {
 			}
 		}
 	}
+	
 
 	@AfterTest(alwaysRun = true)
 	public void closeDriver() {

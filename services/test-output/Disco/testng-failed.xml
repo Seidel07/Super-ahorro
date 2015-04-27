@@ -3,13 +3,15 @@
 <suite name="Failed suite [Disco]">
   <test name="Disco(failed)">
     <classes>
-      <class name="services.disco.DiscoBot">
+      <class name="bots.disco.DiscoBot">
         <methods>
           <include name="closeDriver"/>
-          <include name="run"/>
+          <include name="addScreenshot"/>
           <include name="openDriver"/>
+          <include name="logPossibleUsefulData"/>
+          <include name="run"/>
         </methods>
-      </class> <!-- services.disco.DiscoBot -->
+      </class> <!-- bots.disco.DiscoBot -->
     </classes>
   </test> <!-- Disco(failed) -->
 </suite> <!-- Failed suite [Disco] -->

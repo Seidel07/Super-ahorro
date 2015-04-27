@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Coto]">
-  <test name="Coto(failed)">
+<suite name="Failed suite [Disco]">
+  <test name="Disco(failed)">
     <classes>
-      <class name="services.coto.CotoBot">
+      <class name="bots.disco.DiscoBot">
         <methods>
+          <include name="closeDriver"/>
           <include name="addScreenshot"/>
           <include name="openDriver"/>
+          <include name="logPossibleUsefulData"/>
           <include name="run"/>
         </methods>
-      </class> <!-- services.coto.CotoBot -->
+      </class> <!-- bots.disco.DiscoBot -->
     </classes>
-  </test> <!-- Coto(failed) -->
-</suite> <!-- Failed suite [Coto] -->
+  </test> <!-- Disco(failed) -->
+</suite> <!-- Failed suite [Disco] -->
