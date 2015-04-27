@@ -6,6 +6,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -31,19 +32,24 @@ public class ProductServices extends Dbs {
 		CloseableHttpClient client = HttpClientBuilder.create().build();
 		ObjectMapper mapper = new ObjectMapper();
 		
+		product.setDescription(StringEscapeUtils.escapeHtml4(product.getDescription()));
+		
 		String url = this.endpoint + this.PATH + Entity.PRODUCT.toString().toLowerCase() + "/" + CRUD.CREATE.getCode().toLowerCase(); 
 	    HttpPost request = new HttpPost(url);
 	    request.setHeader("Content-Type", "application/json");
 	    StringEntity entity;
+	    String dtoAsString = "";
 		try {
-			entity = new StringEntity(mapper.writeValueAsString(product));
+			dtoAsString = mapper.writeValueAsString(product);
+			entity = new StringEntity(dtoAsString);
 			request.setEntity(entity);
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		} catch (JsonProcessingException e) {
 			e.printStackTrace();
 		}
-	    
+	    System.out.println("Url: " + url);
+	    System.out.println("Entity: " + dtoAsString);
 	    
 	    HttpResponse response;
 	    String result = null;
@@ -52,6 +58,11 @@ public class ProductServices extends Dbs {
 	    try {
 	        response = client.execute(request);  
 	        statusCode = response.getStatusLine().getStatusCode();
+	        System.out.println("Status Code: " + statusCode);
+	        if (statusCode != 200) {
+				System.out.println("ERROR");
+				System.out.println(response.toString());
+			}
 	        HttpEntity entityResponse = response.getEntity();
 
 	        if (entityResponse != null) {

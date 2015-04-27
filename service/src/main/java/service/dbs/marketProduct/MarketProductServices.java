@@ -6,6 +6,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -31,7 +32,9 @@ public class MarketProductServices extends Dbs{
 		CloseableHttpClient client = HttpClientBuilder.create().build();
 		ObjectMapper mapper = new ObjectMapper();
 		
-		String url = this.endpoint + this.PATH + Entity.MARKETPRODUCT.toString().toLowerCase() + "/" + CRUD.CREATE.getCode().toLowerCase();
+		marketProduct.setDescription(StringEscapeUtils.escapeHtml4(marketProduct.getDescription()));
+		
+		String url = this.endpoint + this.PATH + Entity.MARKETPRODUCT.getCode().toLowerCase() + "/" + CRUD.CREATE.getCode().toLowerCase();
 	    HttpPost request = new HttpPost(url);
 	    request.setHeader("Content-Type", "application/json");
 	    StringEntity entity;
@@ -57,6 +60,9 @@ public class MarketProductServices extends Dbs{
 	        response = client.execute(request);  
 	        statusCode = response.getStatusLine().getStatusCode();
 	        System.out.println("Status code: " + statusCode);
+	        if (statusCode != 200) {
+				System.out.println("ERROR");
+			}
 	        HttpEntity entityResponse = response.getEntity();
 
 	        if (entityResponse != null) {

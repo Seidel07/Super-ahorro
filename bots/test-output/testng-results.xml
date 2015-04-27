@@ -1,66 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Disco" duration-ms="70" started-at="2015-04-27T18:54:04Z" finished-at="2015-04-27T18:54:04Z">
+  <suite name="Disco" duration-ms="771653" started-at="2015-04-27T20:54:38Z" finished-at="2015-04-27T21:07:30Z">
     <groups>
     </groups>
-    <test name="Disco" duration-ms="70" started-at="2015-04-27T18:54:04Z" finished-at="2015-04-27T18:54:04Z">
+    <test name="Disco" duration-ms="771653" started-at="2015-04-27T20:54:38Z" finished-at="2015-04-27T21:07:30Z">
       <class name="bots.disco.DiscoBot">
-        <test-method status="FAIL" signature="openDriver()[pri:0, instance:bots.disco.DiscoBot@1d2224ed]" name="openDriver" is-config="true" duration-ms="0" started-at="2015-04-27T15:54:04Z" finished-at="2015-04-27T15:54:04Z">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The driver executable is a directory: /home/daniel/Public/Trabajo/SuperAhorro/GIT/Super-ahorro/bots]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The driver executable is a directory: /home/daniel/Public/Trabajo/SuperAhorro/GIT/Super-ahorro/bots
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:197)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:119)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:112)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:89)
-	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:117)
-	at configuration.ConfigurationLoaderGui.openDriver(ConfigurationLoaderGui.java:27)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
-	at org.testng.TestRunner.run(TestRunner.java:609)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+        <test-method status="PASS" signature="openDriver()[pri:0, instance:bots.disco.DiscoBot@380dcf35]" name="openDriver" is-config="true" duration-ms="1019" started-at="2015-04-27T17:54:38Z" finished-at="2015-04-27T17:54:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openDriver -->
-        <test-method status="SKIP" signature="run()[pri:0, instance:bots.disco.DiscoBot@1d2224ed]" name="run" duration-ms="1" started-at="2015-04-27T15:54:04Z" finished-at="2015-04-27T15:54:04Z">
+        <test-method status="PASS" signature="run()[pri:0, instance:bots.disco.DiscoBot@380dcf35]" name="run" duration-ms="770015" started-at="2015-04-27T17:54:39Z" finished-at="2015-04-27T18:07:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run -->
-        <test-method status="SKIP" signature="logPossibleUsefulData(org.testng.ITestResult)[pri:0, instance:bots.disco.DiscoBot@1d2224ed]" name="logPossibleUsefulData" is-config="true" duration-ms="0" started-at="2015-04-27T15:54:04Z" finished-at="2015-04-27T15:54:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logPossibleUsefulData -->
-        <test-method status="SKIP" signature="addScreenshot(org.testng.ITestResult)[pri:0, instance:bots.disco.DiscoBot@1d2224ed]" name="addScreenshot" is-config="true" duration-ms="0" started-at="2015-04-27T15:54:04Z" finished-at="2015-04-27T15:54:04Z">
+        <test-method status="PASS" signature="addScreenshot(org.testng.ITestResult)[pri:0, instance:bots.disco.DiscoBot@380dcf35]" name="addScreenshot" is-config="true" duration-ms="4" started-at="2015-04-27T18:07:29Z" finished-at="2015-04-27T18:07:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=run status=SUCCESS method=DiscoBot.run()[pri:0, instance:bots.disco.DiscoBot@380dcf35] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addScreenshot -->
-        <test-method status="PASS" signature="closeDriver()[pri:0, instance:bots.disco.DiscoBot@1d2224ed]" name="closeDriver" is-config="true" duration-ms="0" started-at="2015-04-27T15:54:04Z" finished-at="2015-04-27T15:54:04Z">
+        <test-method status="PASS" signature="logPossibleUsefulData(org.testng.ITestResult)[pri:0, instance:bots.disco.DiscoBot@380dcf35]" name="logPossibleUsefulData" is-config="true" duration-ms="1" started-at="2015-04-27T18:07:29Z" finished-at="2015-04-27T18:07:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=run status=SUCCESS method=DiscoBot.run()[pri:0, instance:bots.disco.DiscoBot@380dcf35] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logPossibleUsefulData -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:bots.disco.DiscoBot@380dcf35]" name="closeDriver" is-config="true" duration-ms="596" started-at="2015-04-27T18:07:29Z" finished-at="2015-04-27T18:07:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->

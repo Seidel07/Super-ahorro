@@ -58,6 +58,9 @@ public class PriceServices extends Dbs{
 	        response = client.execute(request);  
 	        statusCode = response.getStatusLine().getStatusCode();
 	        System.out.println("Status code: " + statusCode);
+	        if (statusCode != 200) {
+				System.out.println("ERROR");
+			}
 	        HttpEntity entityResponse = response.getEntity();
 
 	        if (entityResponse != null) {

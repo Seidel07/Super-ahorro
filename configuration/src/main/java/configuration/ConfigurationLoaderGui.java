@@ -21,9 +21,9 @@ public class ConfigurationLoaderGui {
 
 	@BeforeTest
 	public void openDriver() {
-		File file = new File("");
-		String path = file.getAbsolutePath().replace("services", "pages\\src\\main\\java\\pages\\chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", path);
+//		File file = new File("");
+//		String path = file.getAbsolutePath().replace("services", "pages\\src\\main\\java\\pages\\chromedriver.exe");
+//		System.setProperty("webdriver.chrome.driver", path);
 		this.driver = new ChromeDriver();
 	}
 	

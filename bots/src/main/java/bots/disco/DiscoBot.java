@@ -1,9 +1,11 @@
 package bots.disco;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.joda.time.DateTime;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
@@ -63,11 +65,15 @@ public class DiscoBot extends ConfigurationLoaderGui{
 			if (!productLoaded) {
 				newProduct = this.createProduct(newProduct);
 			}
+			
 			if (!marketProductLoaded) {
+				newMarketProduct.setProductId(newProduct.getId());
+				newMarketProduct.setMarketId(this.actualMarket.getId());
 				newMarketProduct = this.createMarketProduct(newMarketProduct);
 			}
 			
-			newPrice.setProductId(newProduct.getId());
+			newPrice.setProductId(newMarketProduct.getId());
+			newPrice.setDate(BigDecimal.valueOf(DateTime.now().getMillis()));
 			this.createPrice(newPrice);
 			
 		}
