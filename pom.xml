@@ -12,7 +12,7 @@
 	<modules>
 		<module>configuration</module>
 		<module>pages</module>
-		<module>services</module>
+		<module>bots</module>
 		<module>service</module>
 	</modules>
 

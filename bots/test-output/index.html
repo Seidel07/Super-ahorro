@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Disco">
-              <span class="suite-name border-failed">Disco</span>
+              <span class="suite-name border-skipped">Disco</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Disco">
-                    <span>C:\Users\Irene\Documents\Dani\Programas\Workspace\SuperAhorro\GIT\SuperAhorro\services\src\main\resources\executions\discoBot.xml</span>
+                    <span>discoBot.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,21 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,  1 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Disco" class="hide-methods failed suite-Disco"> (hide)</a> <!-- hide-methods failed suite-Disco -->
-                      <a href="#" panel-name="suite-Disco" class="show-methods failed suite-Disco"> (show)</a> <!-- show-methods failed suite-Disco -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Disco" class="hide-methods skipped suite-Disco"> (hide)</a> <!-- hide-methods skipped suite-Disco -->
+                      <a href="#" panel-name="suite-Disco" class="show-methods skipped suite-Disco"> (show)</a> <!-- show-methods skipped suite-Disco -->
                     </span>
-                    <div class="method-list-content failed suite-Disco">
+                    <div class="method-list-content skipped suite-Disco">
                       <span>
-                        <img width="3%" src="failed.png"/>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Disco" title="bots.disco.DiscoBot" hash-for-method="run">run</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Disco -->
+                    </div> <!-- method-list-content skipped suite-Disco -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,9 +116,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Disco" class="panel Disco">
-          <div class="suite-Disco-class-failed">
+          <div class="suite-Disco-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">bots.disco.DiscoBot</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -127,23 +127,14 @@
                   <a name="run">
                   </a> <!-- run -->
                   <span class="method-name">run</span>
-                  <div class="stack-trace">java.lang.IndexOutOfBoundsException: Index: 34, Size: 34
-	at java.util.ArrayList.RangeCheck(Unknown Source)
-	at java.util.ArrayList.get(Unknown Source)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:38)
-	at $Proxy12.get(Unknown Source)
-	at bots.disco.DiscoBot.setAllProducts(DiscoBot.java:154)
-	at bots.disco.DiscoBot.run(DiscoBot.java:41)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Disco-class-failed -->
+          </div> <!-- suite-Disco-class-skipped -->
         </div> <!-- panel Disco -->
         <div panel-name="test-xml-Disco" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Irene\Documents\Dani\Programas\Workspace\SuperAhorro\GIT\SuperAhorro\services\src\main\resources\executions\discoBot.xml</span>
+            <span class="header-content">/home/daniel/Public/Trabajo/SuperAhorro/GIT/Super-ahorro/bots/src/main/resources/executions/discoBot.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -196,12 +187,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'run')
 data.setCell(0, 2, 'bots.disco.DiscoBot')
-data.setCell(0, 3, 364193);
+data.setCell(0, 3, 1);
 window.suiteTableData['Disco']= { tableData: data, tableDiv: 'times-div-Disco'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 minutes</span>
+              <span class="suite-total-time">Total running time: 1 ms</span>
               <div id="times-div-Disco">
               </div> <!-- times-div-Disco -->
             </div> <!-- times-div -->
@@ -229,26 +220,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">bots.disco.DiscoBot</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">openDriver</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">run</span>
-                <span class="method-start">2708 ms</span>
+                <span class="method-start">63 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">addScreenshot([TestResult name=run status=FAILURE method=DiscoBot.run()[pri:0, instance:bots.disco.DiscoBot@5a4fdf...)</span>
-                <span class="method-start">366911 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">logPossibleUsefulData([TestResult name=run status=FAILURE method=DiscoBot.run()[pri:0, instance:bots.disco.DiscoBot@5a4fdf...)</span>
-                <span class="method-start">367255 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">367267 ms</span>
+                <span class="method-start">67 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
