@@ -2,42 +2,42 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Disco" duration-ms="771653" started-at="2015-04-27T20:54:38Z" finished-at="2015-04-27T21:07:30Z">
+  <suite name="Disco" duration-ms="19014258" started-at="2015-04-28T23:46:02Z" finished-at="2015-04-29T05:02:56Z">
     <groups>
     </groups>
-    <test name="Disco" duration-ms="771653" started-at="2015-04-27T20:54:38Z" finished-at="2015-04-27T21:07:30Z">
+    <test name="Disco" duration-ms="19014258" started-at="2015-04-28T23:46:02Z" finished-at="2015-04-29T05:02:56Z">
       <class name="bots.disco.DiscoBot">
-        <test-method status="PASS" signature="openDriver()[pri:0, instance:bots.disco.DiscoBot@380dcf35]" name="openDriver" is-config="true" duration-ms="1019" started-at="2015-04-27T17:54:38Z" finished-at="2015-04-27T17:54:39Z">
+        <test-method status="PASS" signature="openDriver()[pri:0, instance:bots.disco.DiscoBot@6c05b57b]" name="openDriver" is-config="true" duration-ms="1621" started-at="2015-04-28T20:46:02Z" finished-at="2015-04-28T20:46:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openDriver -->
-        <test-method status="PASS" signature="run()[pri:0, instance:bots.disco.DiscoBot@380dcf35]" name="run" duration-ms="770015" started-at="2015-04-27T17:54:39Z" finished-at="2015-04-27T18:07:29Z">
+        <test-method status="PASS" signature="run()[pri:0, instance:bots.disco.DiscoBot@6c05b57b]" name="run" duration-ms="19011929" started-at="2015-04-28T20:46:04Z" finished-at="2015-04-29T02:02:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run -->
-        <test-method status="PASS" signature="addScreenshot(org.testng.ITestResult)[pri:0, instance:bots.disco.DiscoBot@380dcf35]" name="addScreenshot" is-config="true" duration-ms="4" started-at="2015-04-27T18:07:29Z" finished-at="2015-04-27T18:07:29Z">
+        <test-method status="PASS" signature="addScreenshot(org.testng.ITestResult)[pri:0, instance:bots.disco.DiscoBot@6c05b57b]" name="addScreenshot" is-config="true" duration-ms="2" started-at="2015-04-29T02:02:56Z" finished-at="2015-04-29T02:02:56Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=run status=SUCCESS method=DiscoBot.run()[pri:0, instance:bots.disco.DiscoBot@380dcf35] output={null}]]]>
+                <![CDATA[[TestResult name=run status=SUCCESS method=DiscoBot.run()[pri:0, instance:bots.disco.DiscoBot@6c05b57b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addScreenshot -->
-        <test-method status="PASS" signature="logPossibleUsefulData(org.testng.ITestResult)[pri:0, instance:bots.disco.DiscoBot@380dcf35]" name="logPossibleUsefulData" is-config="true" duration-ms="1" started-at="2015-04-27T18:07:29Z" finished-at="2015-04-27T18:07:29Z">
+        <test-method status="PASS" signature="logPossibleUsefulData(org.testng.ITestResult)[pri:0, instance:bots.disco.DiscoBot@6c05b57b]" name="logPossibleUsefulData" is-config="true" duration-ms="1" started-at="2015-04-29T02:02:56Z" finished-at="2015-04-29T02:02:56Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=run status=SUCCESS method=DiscoBot.run()[pri:0, instance:bots.disco.DiscoBot@380dcf35] output={null}]]]>
+                <![CDATA[[TestResult name=run status=SUCCESS method=DiscoBot.run()[pri:0, instance:bots.disco.DiscoBot@6c05b57b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logPossibleUsefulData -->
-        <test-method status="PASS" signature="closeDriver()[pri:0, instance:bots.disco.DiscoBot@380dcf35]" name="closeDriver" is-config="true" duration-ms="596" started-at="2015-04-27T18:07:29Z" finished-at="2015-04-27T18:07:30Z">
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:bots.disco.DiscoBot@6c05b57b]" name="closeDriver" is-config="true" duration-ms="668" started-at="2015-04-29T02:02:56Z" finished-at="2015-04-29T02:02:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->

@@ -171,7 +171,7 @@ public class DiscoBot extends ConfigurationLoaderGui{
 					dhp.waitUntilPageStopsLoading();
 				}
 			}
-			i = dhp.getCategoryElementList().size();
+//			i = dhp.getCategoryElementList().size();
 
 		}
 		return productList;

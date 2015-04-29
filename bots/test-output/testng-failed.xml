@@ -6,7 +6,9 @@
       <class name="bots.disco.DiscoBot">
         <methods>
           <include name="closeDriver"/>
+          <include name="addScreenshot"/>
           <include name="openDriver"/>
+          <include name="logPossibleUsefulData"/>
           <include name="run"/>
         </methods>
       </class> <!-- bots.disco.DiscoBot -->

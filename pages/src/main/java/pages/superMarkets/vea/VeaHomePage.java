@@ -22,6 +22,10 @@ public class VeaHomePage extends SeleniumPage  {
 	@FindBys({@FindBy(id = "ctl00_hlLogoDiscoVirtual"), @FindBy(tagName = "img")})
 	private WebElement loadImage;
 	
+	public List<WebElement> getCategoryElementList() {
+		return this.categoriesElementList;
+	}
+	
 	String notLoadingImageName = "https://www.veadigital.com.ar/_Imgs/logo_home.gif";
 
 	public VeaHomePage(WebDriver driver) {
@@ -34,7 +38,7 @@ public class VeaHomePage extends SeleniumPage  {
 		return new VeaProductsPage(this.driver);
 	}
 	
-	protected boolean waitUntilPageStopsLoading() {
+	public boolean waitUntilPageStopsLoading() {
 		Long startTime = DateTime.now().getMillis();
 		while(!this.loadImage.getAttribute("src").equals(this.notLoadingImageName)) {
 			this.sleep(500L);

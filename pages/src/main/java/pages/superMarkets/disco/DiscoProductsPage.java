@@ -65,7 +65,7 @@ public class DiscoProductsPage extends DiscoHomePage{
 					newProduct = this.setProduct(categoryId, this.productElementList.get(i));
 					productList.add(newProduct);
 				} catch (StaleElementReferenceException e) {
-					System.out.println("hola4");
+					System.out.println("This might be an infinite loop");
 				}
 			}
 
@@ -77,12 +77,12 @@ public class DiscoProductsPage extends DiscoHomePage{
 
 	private List<Product> setAllProductsFromSubCategory(Long categoryId) {
 		List<Product> productList = new ArrayList<Product>();
+		productList.addAll(this.setAllProductsFromPage(categoryId));
 		while(this.webElementIsDisplayedInPage(By.partialLinkText(">>"))) {
 			productList.addAll(this.setAllProductsFromPage(categoryId));
 			this.nextPageButton.click();
 			boolean pageHasLoaded = this.waitUntilPageStopsLoading();
 		}
-		productList.addAll(this.setAllProductsFromPage(categoryId));
 		return productList;
 	}
 
